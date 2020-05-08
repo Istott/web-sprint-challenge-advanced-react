@@ -1,12 +1,32 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+// const urlName = "Istott"
+const url = `http://localhost:3333/plants`
+
 export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
+  constructor() {
+    super(); // this.state, this.setState, lifecycle methods
+    this.state = {
+      plants: [], // shorthand for tasks: tasks
+    };
+  }
+
 
   // when the component mounts:
   //   - fetch data from the server endpoint - http://localhost:3333/plants
   //   - set the returned plants array to this.state.plants
+
+  componentDidMount() {
+    axios
+      .get(url, { crossdomain: true})
+      .then(res => {
+        console.log(res)
+        this.setState({plants: res.data.plantsData});
+      })
+      .catch(err => console.log(err));
+  }
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {

@@ -30,13 +30,35 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+Any components that hold state are stateful class components. You need your constructor() + super() methods to bring in your state.
+
 2. Describe the different phases of the component lifecycle.
+
+mounting - this is where your constructor, render and componentDidMount methods are invoked.
+
+updating - this is where anytime state is changed. render and componentDidUpdate methods are invoked
+
+Unmounting - this where you clean up your timers and listeners before the component is destroyed.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+constructor - where you bring in your state
+
+render - where you component is rendered and rerendered.
+
+componentDidMount - is where any remote endpoints are rendered
+
+componentDidMount - is when your state has changed and the page needs to be updated.
+
+componentDidUnmount - is where you clean up your timers and listeners before the component is unmounted
+
 4. Define stateful logic.
 
+Stateful logic can be illustrated with custom hooks. With custom hooks you can make your state dynamic and reuseable for other slices of state making it stateful. this cleans up your code. 
+
 5. Describe how to test a React component with React Testing Library.
+
+Create a file with '.test.js' preceding the name of it. make sure to download and import necessary dependancies. you want to import the file you will be testing, then you want to define what you want to test by connecting to elements, texts, roles etc so that the path is known. for an input you want to test what is being typed in to the field, for a button you want to test the functionality of it by whether it does what it was intended... this usually means to test the result of the effect of clicking the button. SO on and so forth. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

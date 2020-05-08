@@ -9,7 +9,7 @@ export default class PlantList extends Component {
   constructor() {
     super(); // this.state, this.setState, lifecycle methods
     this.state = {
-      plants: [], // shorthand for tasks: tasks
+      plants: []
     };
   }
 

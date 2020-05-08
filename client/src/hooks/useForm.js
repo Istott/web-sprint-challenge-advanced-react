@@ -14,16 +14,5 @@ export const useForm = (key, initialValue) => {
     });
   };
 
-  // const handleBlur = e => {
-
-  // }
-
-  // const handleValidation
-
-//   const clearForm = e => {
-//     if (e) e.preventDefault();
-//     setValues(initialValue);
-//   };
-
   return [values, handleChanges];
 };
